@@ -28,8 +28,9 @@ exports.signup = (req, res) => {
       });
     })
     .catch((err) => {
+      console.log(err);
       res.status(400).json({
-        err: "Not able to save the use the database",
+        err: "Not able to save the user in database",
       });
     });
 };
