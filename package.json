@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "build": "ncc build app.js -o dist"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
