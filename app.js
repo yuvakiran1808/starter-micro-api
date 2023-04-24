@@ -9,6 +9,9 @@ const cors = require("cors");
 const path = require("path");
 
 // All routes
+// const uri = "mongodb+srv://pyuvasaikiran:saikiran123@cluster0.cin0t7f.mongodb.net/?retryWrites=true&w=majority/player";
+
+
 
 const authRoutes = require("./routes/auth");
 const podcastRoutes = require("./routes/podcast");
@@ -16,6 +19,7 @@ const podcastRoutes = require("./routes/podcast");
 mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("DB CONNECTED");
